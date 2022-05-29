@@ -1,0 +1,61 @@
+/*공용사용*/
+body {
+    background-color: gray;
+}
+
+
+/*메인 페이지 전용*/
+.main_form {
+    background-color: white;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    border: 1px solid;
+}
+
+.main_form input{
+    margin-left: 10%;
+}
+
+#user_id_login{
+    margin-top: 10%;
+}
+
+#new{
+    margin-left: 10%;
+}
+
+#login{
+    height: 30%;
+    float: right;
+    margin-right: 10%;
+    margin-top: -20px;
+}
+
+
+/*서브 페이지 전용*/
+.sub_form{
+    background-color: white;
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    border: 1px solid;
+}
+
+.info{
+    margin-left: 10%;
+}
+
+.info_1{
+    margin-top: 10%;
+}
+
+
+/*서브 페이지 전용*/
+.admin_form{
+    background-color: white;
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    border: 1px solid;
+}
