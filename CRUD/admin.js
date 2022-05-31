@@ -37,6 +37,7 @@ var real_submit = document.getElementById("real_submit");
  
 var keynum = 0;
 var control = 0;
+var arrarr_sub = [];
 
 var i = 0, k = 0, g = 0, m = 0, n = 0;
 let savearr = [];
@@ -72,14 +73,14 @@ function Storagelist(){
     var locallist = localStorage.length;
     admin_value.innerHTML = "";
 
-    for(m = 0; m < locallist-1; m++){
+    for(m = 0; m < locallist-2; m++){
         admin_value.innerHTML += '<div>' + localStorage.getItem(m) + '</div>';
     }
 }
 
 function admin_search1(){
     var locallist = localStorage.length;
-    for(n = 0;n < locallist-1; n++){
+    for(n = 0;n < locallist-2; n++){
         var keyvalue1 = localStorage.getItem(n);
         if(admin_search.value == keyvalue1){
             console.log('true');
