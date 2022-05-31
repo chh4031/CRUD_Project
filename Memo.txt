@@ -10,3 +10,19 @@
 
 중복도 어느정도 해결했고, 값을 수정할때 중복이 불가능하겠금 하는 거랑
 값을 여러개 지정받을때 해결하는 부분만 해결시키면 될듯.
+
+새롭게 알게된 부분
+
+- localStorage의 사용법과 정의, 구동방식
+	- locatStorage.setItem(), locatStorage.getItem(), locatStorage.clear(), locatStorage.removeItem(), 	locatStorage.length
+	- 영구적 저장은 DB를 이용하고, 임시적 저장은 쿠키를 이용하지만 일정시간동안 영구적으로 저장하기위해 	WebStorage API에서 지원하는 LocalStorage를 이용
+
+- JSON 관련
+	- JSON.parse() : String으로 저장된걸 자바스크립트가 알 수 있는 배열방식으로 만듬 (JSON을 객체로)
+	- JSON.stringify() : 객체든 배열이든 String형식으로 저장(객체를 JSON으로)
+
+- JSON이란?
+	- 데이터를 저장하거나 전송할때 쓰는 데이터 교환의 방식
+	- 용량이 적고, 서버로의 데이터 전송도 가능함
+	- JSON은 텍스트 형식이다.
+	- 대부분 프로그래밍 언어에서의 사용이 가능함.
