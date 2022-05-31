@@ -107,10 +107,23 @@ function realok(){
     console.log(update_id.value);
     if(control == 1){
         localStorage.setItem(n, update_id.value);
+        control = 0;
     }else{
         alert("잘못된 제출입니다.");
     }
 }
+
+function removeok(){
+    if(control == 1){
+        localStorage.removeItem(n);
+        localStorage.setItem(n, "null"+n);
+        control = 0;
+    }else{
+        alert("잘못된 삭제 입니다.")
+    }
+}
+
+
 /*
 function keyvalue(){
     for(n = 0;n < locallist-1; n++){
