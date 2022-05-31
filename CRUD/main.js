@@ -14,7 +14,7 @@ function bringvalue(){
     //console.log(user_id_value);
     //location.href="admin.html?" + user_name_value + ":"+ user_id_value 이방식 안씀
     
-    /*
+    /* 오브젝터 형식으로 받아서 여러개 값을 받을 때 사용할거
     localStorage['keys'] = JSON.stringify({
         'name': '이름',
         'id': '아이디',
