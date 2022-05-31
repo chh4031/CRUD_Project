@@ -51,11 +51,37 @@ body {
 }
 
 
-/*서브 페이지 전용*/
-.admin_form{
-    background-color: white;
-    width: 800px;
-    height: 600px;
+/*어드민 페이지 전용*/
+.admin_main{
     margin: auto;
+    width: 1200px;
+
+}
+
+.admin_form_1{
+    background-color: white;
+    width: 300px;
+    height: 500px;
     border: 1px solid;
+}
+
+.admin_form_2{
+    background-color: white;
+    width: 300px;
+    height: 500px;
+    border: 1px solid;
+
+    margin-left: 37.5%;
+    margin-top: -502px;
+
+}
+
+.admin_form_3{
+    background-color: white;
+    width: 300px;
+    height: 500px;
+    border: 1px solid;
+    
+    margin-left: 75%;
+    margin-top: -502px;
 }

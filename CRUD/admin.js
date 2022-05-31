@@ -30,7 +30,7 @@ data['id']
 data['pw']
 */
 var admin_value = document.getElementById('admin_value');
-var i = 0, k = 0, g = 0, m;
+var i = 0, k = 0, g = 0, m = 0;
 let savearr = [];
 k = localStorage.getItem('k');//k값 즉 i의 값 받기
 
@@ -51,3 +51,18 @@ for(g = 0;g < k;g++){
     console.log('데이터가 들어간 배열값'+a1);
 }
 console.log(savearr);
+
+function Storageclear(){
+    localStorage.clear();
+}
+
+function Storagecomfirm(){
+    console.log(localStorage);
+}
+
+function Storagelist(){
+    var locallist = localStorage.length;
+    for(m = 0; m < locallist-1; m++){
+        admin_value.innerHTML += '<div>' + localStorage.getItem(m) + '</div>';
+    }
+}
