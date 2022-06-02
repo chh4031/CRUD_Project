@@ -28,7 +28,7 @@ function bringvalue(){
     localStorage['id']
     localStorage['pw']
     */
-
+    //console.log(arrarr.includes(user_name_value)); 이거 true값 반환
     if(arrarr.includes(user_name_value)){
         alert("값이 겹칩니다.");
     }else{

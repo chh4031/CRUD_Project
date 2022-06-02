@@ -38,6 +38,8 @@ var real_submit = document.getElementById("real_submit");
 var keynum = 0;
 var control = 0;
 var arrarr_sub = [];
+arrarr_sub = arrarr_sub.concat(JSON.parse(localStorage.getItem('z')));
+console.log(arrarr_sub);
 
 var i = 0, k = 0, g = 0, m = 0, n = 0;
 let savearr = [];
@@ -105,12 +107,23 @@ function ok(){
 }
 
 function realok(){
+    var VE = update_id.value;
     console.log(update_id.value);
     if(control == 1){
-        localStorage.setItem(n, update_id.value);
-        control = 0;
+        if(arrarr_sub.includes(update_id.value)){
+            alert("값이 겹칩니다.");
+            control = 0;
+        }else{
+            localStorage.setItem(n, update_id.value);
+            //arrarr_sub.indexOf(update_id.value);
+            delete arrarr_sub[arrarr_sub.indexOf(VE)];
+            arrarr_sub.splice(arrarr_sub.indexOf(VE),0,update_id.value);
+
+            control = 0;
+        }
     }else{
         alert("잘못된 제출입니다.");
+        control = 0;
     }
 }
 
@@ -118,8 +131,11 @@ function removeok(){
     if(control == 1){
         localStorage.removeItem(n);
         localStorage.setItem(n, "null"+n);
+        delete arrarr_sub[arrarr_sub.indexOf(update_id.value)];
+        arrarr_sub.splice((arrarr_sub.indexOf(update_id.value)-1),0,'');
         control = 0;
     }else{
+        control = 0;
         alert("잘못된 삭제 입니다.")
     }
 }
