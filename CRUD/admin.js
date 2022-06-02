@@ -112,7 +112,6 @@ function realok(){
     if(control == 1){
         if(arrarr_sub.includes(update_id.value)){
             alert("값이 겹칩니다.");
-            control = 0;
         }else{
             localStorage.setItem(n, update_id.value);
             //arrarr_sub.indexOf(update_id.value);
@@ -120,10 +119,10 @@ function realok(){
             arrarr_sub.splice(arrarr_sub.indexOf(VE),0,update_id.value);
 
             control = 0;
+            return control;
         }
     }else{
-        alert("잘못된 제출입니다.");
-        control = 0;
+        alert("잘못된 제출입니다.");    
     }
 }
 
